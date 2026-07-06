@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Space+Grotesk:wght@300..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Manrope", sans-serif;
+  --color-emerald-50: #ebf5fc;
+  --color-emerald-100: #d6eaf8;
+  --color-emerald-200: #aed6f1;
+  --color-emerald-300: #5dade2;
+  --color-emerald-400: #29a0e6;
+  --color-emerald-500: #0075ba;
+  --color-emerald-600: #005f96;
+  --color-emerald-700: #004c7a;
+  --color-emerald-800: #003b5e;
+  --color-emerald-900: #002a45;
+  --color-emerald-950: #001625;
+}
+
+/* Custom scrollbar for minimalist UI */
+/* Chrome / Edge / Safari */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121a2d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0075ba;
+  border-radius: 999px;
+  border: 2px solid #121a2d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0089db;
+}
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #0075ba #121a2d;
+}
+
+body {
+  background-color: #0b1320;
+  color: #f1f5f9;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom size for daily target choices block in portrait tablet mode */
+@media (min-width: 600px) and (max-width: 1024px) and (orientation: portrait) {
+  .daily-focus-label {
+    font-size: 10px !important;
+  }
+}
+
+

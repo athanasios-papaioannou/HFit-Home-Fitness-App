@@ -1,0 +1,6 @@
+{
+  "name": "H:Fit",
+  "description": "A minimalist home workout application focusing on consistency and simplicity for home training.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
