@@ -567,6 +567,7 @@ export function generateWorkoutForUser(
     duration: duration,
     exercises: selected,
     targetFocus: focusTitle,
+    focusCategory: focusCategory,
   };
 }
 

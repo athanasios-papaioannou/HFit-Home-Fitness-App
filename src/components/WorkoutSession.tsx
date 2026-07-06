@@ -246,10 +246,8 @@ export default function WorkoutSession({
   };
 
   // Resolve translated target focus labels
-  const focusName = workout.targetFocus === 'combo' ? (language === 'el' ? 'ΜΙΚΤΗ' : 'COMBO')
-                : workout.targetFocus === 'strength' ? (language === 'el' ? 'ΔΥΝΑΜΗ' : 'STRENGTH')
-                : workout.targetFocus === 'cardio' ? (language === 'el' ? 'ΚΑΡΔΙΟ' : 'CARDIO')
-                : (language === 'el' ? 'ΚΟΡΜΟΣ' : 'CORE');
+  const catKey = workout.focusCategory || (workout.id.split('_')[4] as 'strength' | 'cardio' | 'core' | 'combo') || 'combo';
+  const focusName = CATEGORY_TRANSLATION[language][catKey] || catKey;
 
   return (
     <div className="py-8 px-4 sm:px-6 lg:px-8">

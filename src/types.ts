@@ -51,6 +51,7 @@ export interface Workout {
   duration: number; // in minutes
   exercises: Exercise[];
   targetFocus: string; // E.g., "Full Body", "Upper Body", "Core & Legs"
+  focusCategory?: 'strength' | 'cardio' | 'core' | 'combo';
 }
 
 export interface WorkoutHistoryEntry {
