@@ -53,6 +53,19 @@ npm run build
 
 H:Fit was developed as a personal project to explore modern front-end development, responsive user interface design and AI-assisted development workflows using Google AI Studio. The project focuses on creating an intuitive and engaging home fitness experience through thoughtful UX decisions, structured workout flows and a polished visual design.
 
+## Changelog
+
+### v1.0.4 – Initial Public Release
+
+- Initial public release
+- Personalized workout generation
+- Equipment-based workout customization
+- Guided workout execution with timers
+- Workout history & consistency tracking
+- English & Greek localization
+- Responsive desktop & mobile interface
+- Custom dark UI & design system
+
 ---
 
 Designed & developed by **Athanasios Papaioannou**
