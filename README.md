@@ -1,58 +1,20 @@
-# H:Fit
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+</div>
 
-A personalized home fitness training application built with React, TypeScript and Tailwind CSS.
+# Run and deploy your AI Studio app
 
-H:Fit helps users generate structured home workout routines based on their fitness level, available equipment and training goals. The application provides a guided workout experience with exercise timers, progress tracking and bilingual support, all running entirely on the client side.
+This contains everything you need to run your app locally.
 
-## Features
+View your app in AI Studio: https://ai.studio/apps/be9f26b2-d790-43ca-a2b7-95715a3032db
 
-- 🏋️ Personalized workout generation
-- 💪 Equipment-based training customization
-- ⏱️ Guided workout timers and set progression
-- 📈 Workout history and consistency streak tracking
-- 🌍 English & Greek localization
-- 📱 Responsive design for desktop and mobile
-- 💾 Local data persistence
+## Run Locally
 
-## Tech Stack
+**Prerequisites:**  Node.js
 
-- React 
-- TypeScript
-- Tailwind CSS 
-- Vite
-- Motion for React
-- Lucide React
 
-## Getting Started
-
-Clone the repository:
-
-```bash
-git clone https://github.com/athanasios-papaioannou/HFit-Home-Fitness-App.git
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Run the development server:
-
-```bash
-npm run dev
-```
-
-Build for production:
-
-```bash
-npm run build
-```
-
-## About the Project
-
-H:Fit was developed as a personal project to explore modern front-end development, responsive user interface design and AI-assisted development workflows using Google AI Studio. The project focuses on creating an intuitive and engaging home fitness experience through thoughtful UX decisions, structured workout flows and a polished visual design.
-
----
-
-Designed & developed by **Athanasios Papaioannou**
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`

@@ -582,16 +582,38 @@ function adaptRepsForLevel(reps: string, level: FitnessLevel): string {
     return reps;
   }
 
-  // e.g., "10-12 reps" -> parsing reps
-  const match = reps.match(/(\d+)-?(\d+)?\s*(reps|rep)?/);
-  if (match) {
-    const min = parseInt(match[1]);
-    const max = match[2] ? parseInt(match[2]) : min;
+  // Match range (e.g., 10-12) or single number (e.g., 15) and any trailing details
+  const rangeMatch = reps.match(/^(\d+)(?:-(\d+))?\s*(.*)$/);
+  if (rangeMatch) {
+    const min = parseInt(rangeMatch[1]);
+    const max = rangeMatch[2] ? parseInt(rangeMatch[2]) : min;
+    const suffix = rangeMatch[3] ? rangeMatch[3].trim() : '';
+
+    let newMin = min;
+    let newMax = max;
+
     if (level === FitnessLevel.BEGINNER) {
-      return `${Math.max(6, min - 2)}-${Math.max(8, max - 2)} reps`;
+      newMin = Math.max(6, min - 2);
+      newMax = Math.max(8, max - 2);
+      if (newMin > newMax) {
+        newMin = newMax;
+      }
+    } else if (level === FitnessLevel.ADVANCED) {
+      newMin = min + 4;
+      newMax = max + 6;
     }
-    if (level === FitnessLevel.ADVANCED) {
-      return `${min + 4}-${max + 6} reps`;
+
+    let repCountStr = '';
+    if (newMin === newMax) {
+      repCountStr = `${newMin}`;
+    } else {
+      repCountStr = `${newMin}-${newMax}`;
+    }
+
+    if (suffix) {
+      return `${repCountStr} ${suffix}`;
+    } else {
+      return `${repCountStr} reps`;
     }
   }
   return reps;
