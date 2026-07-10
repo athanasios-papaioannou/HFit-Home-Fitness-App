@@ -59,6 +59,12 @@ Current Version: **v1.0.4**
 
 See the full [CHANGELOG](CHANGELOG.md).
 
----
+## 👨‍💻 Author
 
-Designed & developed by **Athanasios Papaioannou**
+Developed by **Athanasios Papaioannou**
+
+🌐 Portfolio  
+https://www.athanasiospapaioannou.gr
+
+💻 GitHub  
+https://github.com/athanasios-papaioannou
